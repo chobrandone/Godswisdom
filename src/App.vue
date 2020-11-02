@@ -1,22 +1,27 @@
 <template>
   <div id="app">
-<Home></Home>
+
+    <div id="app" class="animate__animated animate__fadeIn ">
+   <app-navbar></app-navbar>
+  <router-view></router-view>
+
+</div>
   </div>
 </template>
-
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import Home from './components/Home/home.vue'
-
+import navbar from './components/navigation/nav'
 export default {
-  name: 'App',
-  components: {
-    // HelloWorld,
-    Home
+ components:{
+ 'app-navbar':navbar
+  },
+ 
+  data() {
+    return {
+   navbar
+    }
   }
 }
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -24,6 +29,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 0px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

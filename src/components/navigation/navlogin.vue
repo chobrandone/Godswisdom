@@ -1,6 +1,6 @@
 <template>
    <div>
-<nav id="navbar" :class="{changebackground: scrollPosition > 50}">
+<nav id="navbar" >
   <div class="container navbar navbar-expand-lg py-4"  >
     <a href="#" class="navbar-brand">
       <!-- Logo Image -->
@@ -54,30 +54,33 @@ export default {
 }
 </script>
 <style scoped>
-.changebackground  {
-       background-color:rgb(93, 99, 153);
-       box-shadow: 0px 0px 7px rgb(243, 232, 232);
-       color: black;
-   }
+a{
+  color: white;
+}
+a:hover{
+  color: black;
+  background: rgb(230, 208, 176);
+   transition: background-color 0.4s ease-out;
+}
+
+
    .changebackground ul li a {
       
      
-       color: black;
+       color: white;
    }
-  .navbar{
-  background: transparent;
- 
-}
-.navbar ul li a{
+
+b
+#navbar ul li a{
   color: white;
 }
 .navbar .join{
   border-radius: 35%;
 }
-.knowledge{
-  color: aliceblue;
-  font-size: 70px;
-  margin-top: 190px;
+#navbar{
+background-color:rgb(93, 99, 153);
+       box-shadow: 0px 0px 7px rgb(243, 232, 232);
+       color: rgb(66, 64, 64);
 }
 nav {
   position: fixed;
@@ -86,7 +89,5 @@ nav {
   width: 100%;
   transition: background-color 0.4s ease-out;
 }
-.change_color{
-  color: black;
-}
+
 </style>
