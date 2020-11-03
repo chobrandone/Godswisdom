@@ -1,33 +1,44 @@
 <template>
    <div>
-<nav id="navbar" :class="{changebackground: scrollPosition > 50}">
-  <div class="container navbar navbar-expand-lg py-4"  >
-    <a href="#" class="navbar-brand">
-      <!-- Logo Image -->
-      <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">
-      <!-- Logo Text -->
-      <span class="text-uppercase font-weight-bold">Company</span>
-    </a>
+<!-- Navigation -->
+<nav id="navbar"  :class="{changebackground: scrollPosition > 50}" class="navbar navbar-expand-lg py-4  fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Start Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse main" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto"  ref="nav">
+      
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <div class="dropdown show">
+  <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Category
+  </a>
 
-    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-
-    <div id="navbarSupportedContent" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a href="#" class="nav-link" >About</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-        <!-- <div>
-                <li class="nav-item " ><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a></li>
-
-        <div class="dropdown-menu">
-        <a href="">events</a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Home</a>
+    <a class="dropdown-item" href="#">Services</a>
+    <a class="dropdown-item" href="#">Our Team</a>
   </div>
-        </div> -->
-    
-
-        <li class="nav-item"><a class="nav-link"> <router-link to="/login">Contact</router-link></a></li>
+</div>
       </ul>
-      <button class="btn btn-blog bg-light join">Join Us</button>
     </div>
   </div>
 </nav>
@@ -55,7 +66,7 @@ export default {
 </script>
 <style scoped>
 .changebackground  {
-       background-color:rgb(93, 99, 153);
+       background-color:rgb(185, 191, 247);
        box-shadow: 0px 0px 7px rgb(243, 232, 232);
        color: black;
    }
@@ -71,6 +82,18 @@ export default {
 .navbar ul li a{
   color: white;
 }
+.dropdown-menu a:hover{
+  background-color:rgb(161, 189, 241);
+   transition: background-color 0.8s ease-out;
+}
+.main ul li a:hover{
+
+transform: perspective(1px) translateZ(0);
+  transition: background-color 0.8s ease-out;
+  background-color: rgb(161, 189, 241);
+  cursor: pointer;
+}
+
 .navbar .join{
   border-radius: 35%;
 }
